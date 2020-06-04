@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <header>
+    
+  </header>
+  <h1 class="title">Hogwarts Administration Office</h1>
+   
+        <input type="search" id="myInput" placeholder="Search for name..." title="Type in a name">
+       <br>
+       <label for="filter">Filter:</label>
+        <select id="filterBy" name="filter">
+          <option value="default" selected="true">All Students</option>
+          <option value="Gryffindor">Gryffindor</option>
+          <option value="Hufflepuff">Hufflepuff</option>
+          <option value="Ravenclaw">Ravenclaw</option>
+          <option value="Slytherin">Slytherin</option>
+          <option value="Expelled">Expelled</option>
+          <option value="Prefects">Prefects</option>
+          <option value="Inquisitorial">Inquisitorial</option>
+        </select>
+        <input id= "filterButton" type="submit">
+        <br>
+        <label for="sort">Sort:</label>
+        <select id="sortBy" name="sort">
+          
+          <option>First Name</option>
+          <option>Last Name</option>
+          <option>House</option>
+        </select>
+        <input id = "sortButton" type="submit">
+        <section class="studentList"></section>
+    <template>
+      <div class="bigBox">
+      <h4 class="name">studentname</h4>
+      <button class="prefect">Appoint Prefect</button>
+      <button class="inquisitorial hidden">Join Inquisitorial</button>
+      <button class="expell">Expel</button>
+    </div>
+    </template>
+
+    <div class="background hidden">
+      <div class="modal">
+        <h3>&#215</h3>
+        <img src="" alt="crest" class="crestpic" />
+        <h1 class="house">studenthouse</h1>
+        
+        <h2 class="modalname">name</h2>
+        <img src="" alt="student picture" class="studentpic" />
+        <div class="pees">
+        <p class="bloodStatus"> Blood Status</p>
+        <p class="isInq hidden"> Inquisitorial Club Member</p>
+        <p class="isPrefect hidden"> Appointed Prefect</p>
+        </div>
+      </div>
+    </div>
+    <div class="prefectBg hidden">
+      <div class="prefectModal">
+        <h3 class="prefectX">&#215</h3>
+        <h2 class="prefectModalName">There are already 2 prefect in this house, choose who you would like to remove.</h2>
+        <p class="prefect1name">Name</p>
+        <button class="prefect1">Remove Prefect</button>
+        <p class="prefect2name">Name</p>
+        <button class="prefect2">Remove Prefect</button>
+        
+      </div>
+    </div>
+    <div class="errorBg hidden">
+      <div class="errorModal">
+        <h3 class="errorX">&#215</h3>
+        <h2 class="errorModalName">You shall not expell!</h2>
+      </div>
+    </div>
+    <script defer src="script.js"></script>
+  </body>
+</html>
